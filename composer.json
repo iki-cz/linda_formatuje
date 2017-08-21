@@ -1,0 +1,14 @@
+{
+  "name": "drupal/linda_formatuje",
+  "type": "drupal-module",
+  "description": "Úpravy šité na míru Lindě",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/linda_formatuje",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/linda_formatuje",
+    "source": "http://cgit.drupalcode.org/linda_formatuje"
+  },
+  "require": { }
+}

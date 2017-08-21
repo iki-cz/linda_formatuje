@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains linda_formatuje.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function linda_formatuje_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the linda_formatuje module.
+    case 'help.page.linda_formatuje':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Úpravy šité na míru Lindě') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+//function linda_formatuje_order_item_insert(\Drupal\Core\Entity\EntityInterface $entity){
+//   drupal_set_message('prave byla vytvorena nova polozka' . $entity->getEntityType()->id());
+//}
+//https://github.com/drupalcommerce/commerce/blob/8.x-2.x/modules/cart/src/Event/CartEvents.php
+//https://www.chapterthree.com/blog/how-to-register-event-subscriber-drupal8

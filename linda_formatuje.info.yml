@@ -1,0 +1,5 @@
+name: Linda formátuje
+type: module
+description: Úpravy šité na míru Lindě
+core: 8.x
+package: Custom
