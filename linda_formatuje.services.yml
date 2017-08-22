@@ -1,0 +1,7 @@
+services:
+  linda_formatuje.item_price_subscriber:
+    class: Drupal\linda_formatuje\EventSubscriber\ItemPriceSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+
