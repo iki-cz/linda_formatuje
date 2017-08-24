@@ -22,9 +22,3 @@ function linda_formatuje_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
-
-//function linda_formatuje_order_item_insert(\Drupal\Core\Entity\EntityInterface $entity){
-//   drupal_set_message('prave byla vytvorena nova polozka' . $entity->getEntityType()->id());
-//}
-//https://github.com/drupalcommerce/commerce/blob/8.x-2.x/modules/cart/src/Event/CartEvents.php
-//https://www.chapterthree.com/blog/how-to-register-event-subscriber-drupal8
