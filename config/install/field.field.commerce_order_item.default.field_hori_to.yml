@@ -1,0 +1,22 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.default
+    - field.storage.commerce_order_item.field_hori_to
+id: commerce_order_item.default.field_hori_to
+field_name: field_hori_to
+entity_type: commerce_order_item
+bundle: default
+label: 'Hoří to?'
+description: '(do 48 hodin, příplatek 399,-)'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

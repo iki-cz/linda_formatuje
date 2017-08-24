@@ -1,0 +1,24 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.default
+    - field.storage.commerce_order_item.field_pocet_stranek
+id: commerce_order_item.default.field_pocet_stranek
+field_name: field_pocet_stranek
+entity_type: commerce_order_item
+bundle: default
+label: 'Počet stránek'
+description: 'Zadej počet stránek textu, které Linda bude upravovat.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 50
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
