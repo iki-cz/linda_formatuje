@@ -14,9 +14,24 @@ class ItemPriceSubscriber implements EventSubscriberInterface {
 
   public function updateItemPrice(CartEntityAddEvent $event) {
 //   	$response = $event->getResponse();
-  	drupal_set_message('Pridani nove polozky do kosiku');
+		$orderItem = $event->getOrderItem();
+		
+// 		var_dump($orderItem->getAdjustments());
+// 		drupal_set_message(sprintf('pocet stranek %1$s', 
+// 				$orderItem->getData('field_pocet_stranek')));
+  	//drupal_set_message('Pridani nove polozky do kosiku');
 //   	$unitPrice = new Price(233, 'CZK');
-//   	$event->getOrderItem()->setUnitPrice($unitPrice);
+//   	$event->getOrderItem()->setUnitPrice($unitPrice, true); //true je overridden_unit_price
+
+		//http://docs.drupalcommerce.org/v2/recipes/orders.html
+// 		$unitPrice = new \Drupal\commerce_price\Price('9.11', 'CZK');
+// 		$orderItem->setUnitPrice($unitPrice, true); //true je overridden_unit_price
+// 		$orderItem->save();
+
+// 		$orderItem->getData($key);
+// 		$orderItem->get('data');
+// 		kint_require();
+// 		drupal_set_message(Kint::dump($orderItem));
   }
   
   /**
