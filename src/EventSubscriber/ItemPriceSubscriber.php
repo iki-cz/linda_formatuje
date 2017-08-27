@@ -16,7 +16,7 @@ class ItemPriceSubscriber implements EventSubscriberInterface {
   public function updateItemPrice(CartEntityAddEvent $event) {
 		$orderItem = $event->getOrderItem();
 		
-		$pocetStranek = $orderItem->field_pocet_stranek->getString();
+		$pocetStranek = (int) $orderItem->field_pocet_stranek->getString();
 		$horiTo = $orderItem->field_hori_to->getString();
 		
 		$priceCalculator = new PriceCalculator();
