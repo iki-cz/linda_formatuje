@@ -6,8 +6,8 @@ class PriceCalculator{
 	const EXPRESS_PRICE = 399;
 	
 	
-	public function calculate(int $pocetStranek, bool $horiTo){
-		$price = $pocetStranek * self::PAGE_PRICE + intval($horiTo) * self::EXPRESS_PRICE;
+	public function calculate($pocetStranek, $horiTo){
+		$price = intval($pocetStranek) * self::PAGE_PRICE + intval($horiTo) * self::EXPRESS_PRICE;
 		return $price;
 	}
 }
