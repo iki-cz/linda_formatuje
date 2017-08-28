@@ -22,3 +22,12 @@ function linda_formatuje_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Custom order twig templates
+ * @param array $theme_registry
+ */
+function linda_formatuje_theme_registry_alter(&$theme_registry) {
+	$theme_registry['commerce_checkout_completion_message']['path'] = drupal_get_path('module', 'linda_formatuje') . '/templates';
+// 	$theme_registry['commerce_order_receipt']['path'] = drupal_get_path('module', 'linda_formatuje') . '/templates';
+}

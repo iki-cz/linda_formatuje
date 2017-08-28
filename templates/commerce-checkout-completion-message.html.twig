@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the completion message.
+ *
+ * Available variables:
+ * - order_entity: The order entity.
+ * - payment_instructions: The payment instructions, if provided.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="checkout-complete">
+  {{ 'Order total is: @total'|t({'@total': order_entity.getTotalPrice|commerce_price_format}) }} <br />
+  {{ 'Your order number is @number (variable symbol).'|t({'@number': order_entity.getOrderNumber}) }} <br />
+  {% if payment_instructions %}
+    <div class="checkout-complete__payment-instructions">
+      {{ payment_instructions }}
+    </div>
+  {% endif %}
+  
+  {{ 'You can view your order on your account page when logged in.'|t }} <br>
+</div>
