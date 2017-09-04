@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.korektura
+id: commerce_product_variation.korektura
+target_entity_type_id: commerce_product_variation
+target_bundle: korektura
+default_langcode: site_default
+language_alterable: false

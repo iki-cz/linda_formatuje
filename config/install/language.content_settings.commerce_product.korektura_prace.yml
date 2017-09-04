@@ -1,0 +1,10 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.korektura_prace
+id: commerce_product.korektura_prace
+target_entity_type_id: commerce_product
+target_bundle: korektura_prace
+default_langcode: site_default
+language_alterable: false
