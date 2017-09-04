@@ -1,0 +1,8 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: korektura
+label: Korektura
+orderItemType: jazykova_korektura
+generateTitle: false
+traits: {  }

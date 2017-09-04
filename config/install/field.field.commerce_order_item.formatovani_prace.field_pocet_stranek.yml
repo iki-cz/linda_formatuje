@@ -2,16 +2,16 @@ langcode: cs
 status: true
 dependencies:
   config:
-    - commerce_order.commerce_order_item_type.default
+    - commerce_order.commerce_order_item_type.formatovani_prace
     - field.storage.commerce_order_item.field_pocet_stranek
-id: commerce_order_item.default.field_pocet_stranek
+id: commerce_order_item.formatovani_prace.field_pocet_stranek
 field_name: field_pocet_stranek
 entity_type: commerce_order_item
-bundle: default
+bundle: formatovani_prace
 label: 'Počet stránek'
-description: 'Zadej počet stránek textu, které Linda bude upravovat.'
+description: 'Počet stránek k naformátování. '
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 50

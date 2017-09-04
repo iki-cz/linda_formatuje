@@ -4,9 +4,14 @@ description: Úpravy šité na míru Lindě
 core: 8.x
 package: Custom
 dependencies:
+  - commerce_cart
+  - commerce_checkout  
   - commerce_order
   - commerce_price
   - commerce_product
   - commerce_tax
   - field
   - file
+  - state_machine  
+  - text
+  - user

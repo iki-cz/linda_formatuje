@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: korektura_prace
+label: 'Korektura práce'
+description: ''
+variationType: korektura
+injectVariationFields: true
+traits: {  }

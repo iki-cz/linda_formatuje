@@ -1,0 +1,9 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: formatovani_prace
+label: 'Formátování práce'
+description: ''
+variationType: formatovani
+injectVariationFields: true
+traits: {  }

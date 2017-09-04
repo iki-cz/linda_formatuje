@@ -1,0 +1,24 @@
+langcode: cs
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.jazykova_korektura
+    - field.storage.commerce_order_item.field_pocet_normostran
+id: commerce_order_item.jazykova_korektura.field_pocet_normostran
+field_name: field_pocet_normostran
+entity_type: commerce_order_item
+bundle: jazykova_korektura
+label: 'Počet normostran'
+description: 'Jedna normostrana obsahuje 1800 znaků včetně mezer. Celkový počet znaků lze nalézt v levém spodním rohu Wordu.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 30
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

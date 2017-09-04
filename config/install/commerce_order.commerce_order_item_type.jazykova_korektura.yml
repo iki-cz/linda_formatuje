@@ -1,0 +1,13 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: services
+label: 'Jazyková korektura'
+id: jazykova_korektura
+purchasableEntityType: commerce_product_variation
+orderType: objednavka_korektury
+traits: {  }

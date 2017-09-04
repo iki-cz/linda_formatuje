@@ -1,0 +1,8 @@
+langcode: cs
+status: true
+dependencies: {  }
+id: formatovani
+label: Formátování
+orderItemType: formatovani_prace
+generateTitle: false
+traits: {  }

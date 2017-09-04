@@ -1,0 +1,13 @@
+langcode: cs
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: services
+label: 'Formátování práce'
+id: formatovani_prace
+purchasableEntityType: commerce_product_variation
+orderType: objednavka_formatovani
+traits: {  }
