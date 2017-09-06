@@ -5,7 +5,8 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Drupal\commerce_cart\Event\CartEntityAddEvent;
 use Drupal\commerce_price\Price;
-use Drupal\linda_formatuje\PriceCalculator;
+use Drupal\linda_formatuje\PriceCalculator\KorekturaPriceCalculator;
+use Drupal\linda_formatuje\PriceCalculator\FormatovaniPriceCalculator;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
@@ -14,13 +15,20 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class ItemPriceSubscriber implements EventSubscriberInterface {
 
   public function updateItemPrice(CartEntityAddEvent $event) {
-		$orderItem = $event->getOrderItem();
+  	$orderItem = $event->getOrderItem();
 		
-		$pocetStranek = (int) $orderItem->field_pocet_stranek->getString();
-		$horiTo = $orderItem->field_hori_to->getString();
-		
-		$priceCalculator = new PriceCalculator();
-		$price = (string) $priceCalculator ->calculate($pocetStranek, $horiTo);
+  	$itemType = $orderItem->get('type')->getString();
+  	switch ($itemType){
+  		case 'jazykova_korektura':
+  			$priceCalculator = new KorekturaPriceCalculator($orderItem);
+  			break;
+  			
+  		case 'formatovani_prace':
+  			$priceCalculator = new FormatovaniPriceCalculator($orderItem);
+  			break;
+  	}
+  	
+		$price = (string) $priceCalculator ->calculate();
 		$unitPrice = new Price($price, 'CZK');
 		$orderItem->setUnitPrice($unitPrice, true); //true = overriden
 		$orderItem->save();
