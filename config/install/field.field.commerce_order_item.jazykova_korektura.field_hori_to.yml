@@ -8,8 +8,8 @@ id: commerce_order_item.jazykova_korektura.field_hori_to
 field_name: field_hori_to
 entity_type: commerce_order_item
 bundle: jazykova_korektura
-label: 'Hoří to?'
-description: 'Práce opravdu spěchá, chci ji mít hotovou do 48 hodin.'
+label: 'Hoří to? (+399 Kč)'
+description: 'Práce opravdu spěchá, chci ji mít hotovou do 48 hodin. (jinak 5 dní)'
 required: false
 translatable: true
 default_value:
